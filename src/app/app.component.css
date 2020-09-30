@@ -1,0 +1,27 @@
+button {
+    margin: 1rem;
+}
+.menuItem{
+    margin:0rem !important;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+.mat-sidenav-container{
+    height: 33vh;
+}  
+.mat-sidenav{
+    width: 30vh;
+    background-color: indianred;
+}
+
+.mat-grid-tile{
+    background-color: indianred;
+}
+.__center{
+    display: flex !important;
+    justify-items: flex-end !important;
+}
+

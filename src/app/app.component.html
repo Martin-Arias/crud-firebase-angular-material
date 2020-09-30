@@ -1,0 +1,197 @@
+<!-- ToolBar -->
+<mat-toolbar color="primary">
+  <div>
+  <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+<!-- Menu -->
+  <mat-menu #menu="matMenu">
+  <button class="menuItem" [matMenuTriggerFor]="subMenu1" mat-menu-item>FrontEnd</button>
+  <button class="menuItem" [matMenuTriggerFor]="subMenu2" mat-menu-item>BackEnd</button>
+  </mat-menu>
+
+  <mat-menu #subMenu1="matMenu">
+    <button class="menuItem" mat-menu-item>Angular</button>
+    <button class="menuItem" mat-menu-item>React</button>
+    <button class="menuItem" mat-menu-item>Vue</button>
+  </mat-menu>
+
+  <mat-menu #subMenu2="matMenu">
+    <button class="menuItem" mat-menu-item>Node Js</button>
+    <button class="menuItem" mat-menu-item>PHP</button>
+    <button class="menuItem" mat-menu-item>C#</button>
+  </mat-menu>
+<!-- Menu -->
+</div>
+  <span>Mi aplicacion</span>
+
+  <span class="example-spacer"></span>
+
+  <button mat-icon-button>
+    <mat-icon>favorite</mat-icon>
+  </button>
+
+  <button mat-icon-button>
+    <mat-icon>share</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+<!-- ToolBar -->
+<br>
+<hr>
+
+
+<!-- Side Nav -->
+<mat-sidenav-container >
+
+  <mat-sidenav mode="side" #sidenav>
+    <!--List -->
+    <mat-list>
+      <!-- Home Item -->
+      <mat-list-item> 
+        <mat-icon matListIcon>home</mat-icon>
+        <h3 matLine>Home</h3>
+        <p matLine>Click to go home</p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <!-- Share Item -->
+      <mat-list-item> 
+        <mat-icon matListIcon>share</mat-icon>
+        <h3 matLine>Share</h3>
+        <p matLine>Click to share</p>
+      </mat-list-item>
+      <!-- Folder Item -->
+      <mat-divider></mat-divider>
+      <mat-list-item> 
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>Files</h3>
+        <p matLine>Browse</p>
+      </mat-list-item>
+     </mat-list>
+     <!-- List -->
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <button mat-fab color="warn" (click)="sidenav.toggle()">
+      <mat-icon>view_sidebar</mat-icon>
+    </button>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- Side Nav -->
+<hr>
+<br>
+
+
+
+<!-- Buttons -->
+<h1>Buttons</h1>
+
+<div>
+  <button mat-button>Click me!</button>
+  <button mat-raised-button>Click me!</button>
+  <button mat-flat-button>Click me!</button>
+  <button mat-stroked-button>Click me!</button>
+</div>
+
+
+<div>
+  <button mat-icon-button>Icon</button>
+  <button mat-fab color="warn">
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-mini-fab>
+    <mat-icon>android</mat-icon>
+  </button>
+</div>
+
+<div>
+  <button mat-raised-button color="primary">Click me!</button>
+  <button mat-raised-button color="accent">Click me!</button>
+  <button mat-flat-button color="warn">Click me!</button>
+  <button mat-stroked-button>Click me!</button>
+</div>
+
+<hr>
+<br>
+<!-- Button toggle -->
+<h1>Button toggle</h1>
+
+<mat-button-toggle-group name="fontStyle" #group="matButtonToggleGroup" aria-label="Font Style">
+  <mat-button-toggle value="bold">Bold</mat-button-toggle>
+  <mat-button-toggle value="italic">Italic</mat-button-toggle>
+  <mat-button-toggle value="underline">Underline</mat-button-toggle>
+</mat-button-toggle-group>
+<div class="selectedValue"> <small>{{group.value}}</small> </div>
+<br>
+<hr>
+<br>
+
+<!-- Icons -->
+<h1>Material Icons</h1>
+
+<div>
+  <button mat-icon-button color="primary">
+    <mat-icon>info</mat-icon>
+  </button>
+  <button mat-fab color="warn">
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-mini-fab>
+    <mat-icon>android</mat-icon>
+  </button>
+</div>
+
+<br>
+<hr>
+<br>
+<!-- Icons -->
+
+
+
+<!-- Badges -->
+<h1>Badges</h1>
+
+<div>
+  <button mat-fab color="warn" matBadge="8">
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <span [matBadge]="notifications" [matBadgeHidden]="notifications === 0" matBadgeOverlap="false">Notificaciones</span>
+</div>
+
+<br>
+<hr>
+<br>
+<!-- Badges -->
+
+
+<!-- Progress Spinner -->
+<h1>Progress Spinner</h1>
+
+<div>
+  <mat-progress-spinner strokeWidth="5" diameter="50" *ngIf="showSpinner" mode="indeterminate"></mat-progress-spinner>
+  <button mat-flat-button (click)="loadData()"> Cargar datos</button>
+</div>
+<!-- Progess spinner -->
+<br>
+<hr>
+<br>
+
+<!-- Grid List -->
+<h1>Grid List</h1>
+<mat-grid-list cols="6" rowHeight="30vh" >
+  <mat-grid-tile>Tile 1</mat-grid-tile>
+  <mat-grid-tile rowspan="2">Rowspan 2</mat-grid-tile>
+  <mat-grid-tile>Tile 3</mat-grid-tile>
+  <mat-grid-tile>Tile 4</mat-grid-tile>
+</mat-grid-list>
+<mat-divider></mat-divider>
+
+<mat-grid-list cols="12" rowHeight="30vh" >
+
+  <mat-grid-tile>Tile 2</mat-grid-tile>
+  <mat-grid-tile>Tile 3</mat-grid-tile>
+  <mat-grid-tile>Tile 4</mat-grid-tile>
+  
+</mat-grid-list>
+<!-- Grid List -->
